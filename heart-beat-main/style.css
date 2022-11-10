@@ -1,0 +1,71 @@
+body{
+  height: 100vh;
+  background: #151515;
+  display: grid;
+  place-items: center;
+  box-sizing: border-box;
+}
+
+.heart-loader{
+  background: #ff00a4;
+  width: 150px;
+  height: 150px;
+  position: relative;
+  transform: rotate(45deg);
+  animation: pulsate 1s infinite;
+  box-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px, rgba(240, 46, 170, 0.05) 0px 25px;
+  box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+  box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
+}
+
+.heart-loader::before{
+  position: absolute;
+  content: "";
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  background: #ff00a4;
+  border-radius: 50%;
+  box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
+}
+.heart-loader::after{
+  position: absolute;
+  content: "";
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  background: #ff00a4;
+  border-radius: 50%;
+}
+
+.heart-loader::before{
+  top: 0;
+  left: -68px;
+}
+
+.heart-loader::after{
+  top: -68px;
+  left: 0;
+}
+
+@keyframes pulsate {
+  0% {
+    transform: rotate(45deg) scale(0.8);
+  }
+  5% {
+    transform: rotate(45deg) scale(0.9);
+  }
+  10% {
+    transform: rotate(45deg) scale(0.8);
+  }
+  15% {
+    transform: rotate(45deg) scale(1);
+  }
+  50% {
+    transform: rotate(45deg) scale(0.8);
+  }
+  100% {
+    transform: rotate(45deg) scale(0.8);
+  }
+}
+
